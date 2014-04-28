@@ -6,18 +6,16 @@
 
 get_header(); 
 ?>
-
+dfasdfsadfdsafdsafd
 <div class="container container--main" <?php echo $is_review ? 'itemscope itemtype="http://data-vocabulary.org/Review"' : ''; ?>>
 
     <div class="grid">
-
+sfsdfdsafdsfsdafs
        
           
 <?php if(in_category("blog-posts")){ ?>
- <div class="grid__item  main  float--left  lap-and-up-two-thirds">
+ <div class="grid__item  main  float--right  lap-and-up-two-thirds">
           <div id="trendCatTitle"><div class="redBg"><?php the_title(); ?></div></div>
-
-         
             <?php the_content(); ?>
         </div>
         <div class="grid__item  one-third  palm-one-whole  sidebar">
@@ -38,10 +36,7 @@ get_header();
             
 
 
-          if( class_exists( 'kdMultipleFeaturedImages' ) ) {
-            kd_mfi_the_featured_image( 'featured-image-2', 'post', 'full' );
-            }
-            ?>
+         
         </div>
         <div class="catLinks">
             <span class="bttn1">Button1</span>
@@ -68,7 +63,10 @@ $pageTitle = get_the_title();
   <div id="businessLogos">
     <div class="businessLabel"><div class="businssCat"><?php the_title(); ?></div></div>
 <?php 
-
+ if( class_exists( 'kdMultipleFeaturedImages' ) ) {
+            kd_mfi_the_featured_image( 'featured-image-2', 'post', 'full' );
+            }
+        
 $userList = "";
 $sql = "SELECT users.username, users.avatar, users.country, users.website from users LEFT JOIN trend_cats_users ON users.id=trend_cats_users.user_id WHERE trend_cats_users.page_name='$pageTitle'";
 include_once('php_includes/db_conx.php');
